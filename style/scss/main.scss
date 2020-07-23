@@ -1,0 +1,76 @@
+$white: #ffffff;
+$black: #494949;
+$red: #f67280;
+$gray: #f4f4f4;
+
+$green: #a8e6cf;
+$pink: #ffacb7;
+$gold: #ffe0ac;
+$blue: #6886c5;
+$violet: #dcd6f7;
+
+$center: translateX(-50%) translateY(-50%);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: $black;
+  font-family: "Red Rose", cursive;
+}
+
+.menu {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  display: flex;
+  justify-content: space-around;
+
+  .category-menu {
+    margin: 10px;
+
+    p {
+      color: $green;
+      font-size: 30px;
+      cursor: pointer;
+      user-select: none;
+      z-index: 6;
+    }
+  }
+}
+.header {
+  width: 100%;
+  height: 600px;
+
+  .header-img {
+    width: 100%;
+    max-height: 600px;
+    z-index: 1;
+  }
+}
+
+.category-name {
+  width: 100%;
+  height: 60px;
+  margin: auto;
+  background-color: $black;
+  p {
+    color: $green;
+    font-size: 50px;
+    text-align: center;
+  }
+}
+
+.galery-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 80%;
+  margin: auto;
+  gap: 40px 40px;
+  margin-top: 40px;
+
+  #photo {
+    width: 500px;
+    height: 700px;
+    margin: auto;
+  }
+}
