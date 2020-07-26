@@ -4,8 +4,8 @@ const modalImg = document.querySelector(".modal img");
 const overlay = document.querySelector(".overlay");
 const closeBtn = document.querySelector(".close-window");
 const nextPrevious = document.querySelector(".next-previous");
-const next = document.querySelector(".next");
 const previous = document.querySelector(".previous");
+const next = document.querySelector(".next");
 
 function closePhoto() {
   modal.style.display = "none";
