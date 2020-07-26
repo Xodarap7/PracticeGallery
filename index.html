@@ -24,13 +24,26 @@
   <body>
     <nav>
       <div class="menu">
-        <div class="category-menu"><p>All</p></div>
-        <div class="category-menu"><p>Space</p></div>
-        <div class="category-menu"><p>Nature</p></div>
-        <div class="category-menu"><p>Cars</p></div>
-        <div class="category-menu"><p>Food</p></div>
+        <div id="category-menu" class="all"><p>All</p></div>
+        <div id="category-menu" class="c-space"><p>Space</p></div>
+        <div id="category-menu" class="c-nature"><p>Nature</p></div>
+        <div id="category-menu" class="c-cars"><p>Cars</p></div>
+        <div id="category-menu" class="c-food"><p>Food</p></div>
       </div>
     </nav>
+    <div class="overlay"></div>
+    <div class="close-window">
+      <i class="material-icons">clear</i>
+    </div>
+    <div class="next-previous">
+      <div class="previous"><i class="material-icons">chevron_left</i></div>
+      <div class="next">
+        <i class="material-icons">chevron_right</i>
+      </div>
+    </div>
+    <div class="modal">
+      <img src="" alt="" />
+    </div>
     <header>
       <div class="header">
         <img class="header-img" src="img/header.jpg" alt="" />
@@ -48,6 +61,9 @@
       <img class="c-space" id="photo" src="img/space-6.jpg" alt="" />
       <img class="c-space" id="photo" src="img/space-7.jpg" alt="" />
       <img class="c-space" id="photo" src="img/space-8.jpg" alt="" />
+      <img class="c-car" id="photo" src="img/car-1.jpg" alt="" />
+      <img class="c-car" id="photo" src="img/car-2.jpg" alt="" />
+      <img class="c-car" id="photo" src="img/car-3.jpg" alt="" />
       <img class="c-nature" id="photo" src="img/nature-1.jpg" alt="" />
       <img class="c-nature" id="photo" src="img/nature-2.jpg" alt="" />
       <img class="c-nature" id="photo" src="img/nature-3.jpg" alt="" />
@@ -56,5 +72,7 @@
       <img class="c-nature" id="photo" src="img/nature-6.jpg" alt="" />
       <img class="c-nature" id="photo" src="img/nature-7.jpg" alt="" />
     </div>
+    <script src="js/category-filter.js"></script>
+    <script src="js/modal-img.js"></script>
   </body>
 </html>
