@@ -1,13 +1,17 @@
 const categoriesMenu = document.querySelectorAll("#category-menu");
 const images = document.querySelectorAll("#photo");
+const imagesArray = Array.from(images);
 
 categoriesMenu.forEach((categoryMenu) => {
   categoryMenu.addEventListener("click", () => {
-    categoryName = categoryMenu.getAttribute("class");
-    images.forEach((image) => {
-      categoryImage = image.getAttribute("class");
-      const filter = images.filter(categoryName == categoryImage);
-      console.log(images);
-    });
+    const filter = categoryMenu.getAttribute("class");
+    filterImages(filter);
   });
 });
+
+function filterImages(filter) {
+  const filteredImages = imagesArray.filter((image) =>
+    image.classList.contains(filter)
+  );
+  console.log(filteredImages);
+}
