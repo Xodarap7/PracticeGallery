@@ -9,9 +9,12 @@ categoriesMenu.forEach((categoryMenu) => {
   });
 });
 
+galeryContainer = document.querySelector(".galery-container");
 function filterImages(filter) {
   const filteredImages = imagesArray.filter((image) =>
     image.classList.contains(filter)
   );
   console.log(filteredImages);
+
+  galeryContainer.appendChild(filteredImages);
 }
