@@ -1,0 +1,37 @@
+//_authorization взяты чтили окна и фона
+
+.half-window {
+  img {
+    width: 100%;
+    height: auto;
+    margin-left: 20%;
+  }
+  h6 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    margin-top: 20%;
+  }
+  .categories {
+    width: 100%;
+    height: 50px;
+    border: solid 1px;
+    font-size: 20px;
+    option {
+      height: 30px;
+      font-size: 15px;
+    }
+  }
+
+  #new-image {
+    height: 50px;
+    width: 100%;
+    font-size: 15px;
+    background-color: $green;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: auto;
+    &:focus {
+      background-color: inherit;
+    }
+  }
+}

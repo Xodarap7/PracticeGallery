@@ -52,6 +52,7 @@ const next = document.querySelector(".next");
 function closePhoto() {
   modal.style.display = "none";
   overlay.style.display = "none";
+
   closeBtn.style.display = "none";
   nextPrevious.style.display = "none";
 }
