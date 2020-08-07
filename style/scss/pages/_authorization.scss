@@ -1,19 +1,19 @@
-@keyframes login {
-  50% {
-    transform: translate(10%, 0px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-@keyframes reg {
-  50% {
-    transform: translate(-10%, 0px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
+// @keyframes login {
+//   50% {
+//     transform: translate(10%, 0px);
+//   }
+//   100% {
+//     transform: translate(0px, 0px);
+//   }
+// }
+// @keyframes reg {
+//   50% {
+//     transform: translate(-10%, 0px);
+//   }
+//   100% {
+//     transform: translate(0px, 0px);
+//   }
+// }
 .black-container {
   background-color: $black;
   width: 100%;
@@ -31,6 +31,18 @@
     border-radius: 20px;
     display: flex;
     flex-direction: row;
+    @include screen(desktop) {
+      width: 70%;
+    }
+    @include screen(tablet) {
+      width: 90%;
+    }
+    @media screen and (max-width: 700px) {
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      border-radius: 0px;
+    }
     #reg-button {
       background-color: $red;
       &:hover {
@@ -65,6 +77,9 @@
       margin-top: auto;
       align-items: bottom;
       cursor: pointer;
+      @media screen and (max-width: 700px) {
+        margin-top: 10px;
+      }
       &:focus {
         border-radius: inherit;
         border: 2px;
@@ -76,16 +91,21 @@
       width: 50%;
       background-color: $green;
       height: 100%;
-      border-radius: inherit;
       cursor: pointer;
       user-select: none;
+      border-radius: 20px;
       flex-direction: column;
       align-items: center;
       padding: 20px;
-      &:hover {
-        animation-name: login;
-        animation-duration: 0.7s;
+      @media screen and (max-width: 700px) {
+        border-radius: 0px 0px 20px 20px;
+        width: 100%;
+        height: 50%;
       }
+      // &:hover {
+      //   animation-name: login;
+      //   animation-duration: 0.7s;
+      // }
       h3 {
         position: absolute;
         left: 50%;
@@ -104,6 +124,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      @media screen and (max-width: 700px) {
+        width: 100%;
+        padding-top: 20px;
+      }
 
       h3 {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -113,6 +137,9 @@
         align-items: center;
         flex-direction: column;
         margin-top: 10vh;
+        @media screen and (max-width: 700px) {
+          margin-top: 2vh;
+        }
         input {
           height: 6vh;
           width: 80%;
@@ -140,16 +167,23 @@
       width: 50%;
       background-color: $red;
       height: 100%;
-      border-radius: inherit;
       flex-direction: column;
       align-items: center;
+      border-radius: 20px;
       padding: 20px;
       cursor: pointer;
       user-select: none;
-      &:hover {
-        animation-name: reg;
-        animation-duration: 1s;
+      @media screen and (max-width: 700px) {
+        border-radius: 20px 20px 0px 0px;
+        width: 100%;
+        height: 50%;
+        left: 0%;
+        top: 50%;
       }
+      // &:hover {
+      //   animation-name: reg;
+      //   animation-duration: 1s;
+      // }
       h3 {
         position: absolute;
         left: 50%;

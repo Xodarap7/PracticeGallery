@@ -66,17 +66,21 @@ function openPhoto() {
 
 let route;
 images.forEach((photo) => {
-  photo.addEventListener("click", () => {
-    openPhoto();
-    route = photo.getAttribute("src");
-    modalImg.setAttribute("src", route);
-    closeBtn.addEventListener("click", () => {
-      closePhoto();
+  if (window.innerWidth < 1330) {
+    return;
+  } else {
+    photo.addEventListener("click", () => {
+      openPhoto();
+      route = photo.getAttribute("src");
+      modalImg.setAttribute("src", route);
+      closeBtn.addEventListener("click", () => {
+        closePhoto();
+      });
+      overlay.addEventListener("click", () => {
+        closePhoto();
+      });
     });
-    overlay.addEventListener("click", () => {
-      closePhoto();
-    });
-  });
+  }
 });
 next.addEventListener("click", nextImage);
 previous.addEventListener("click", previousImage);
@@ -100,7 +104,6 @@ function nextImage() {
   for (let i = 0; i < images.length; i++) {
     if (modalImg.src === images[i].src) {
       nextImageNew = images[i].nextElementSibling;
-      console.log(images.length);
     }
   }
 
@@ -110,3 +113,19 @@ function nextImage() {
     modalImg.src = nextImageNew.src;
   }
 }
+
+//bg color menu
+const nav = document.querySelector(".menu");
+let y;
+
+window.addEventListener("scroll", () => {
+  y = window.scrollY;
+
+  if (y > 200) {
+    nav.style.backgroundColor = "#000";
+    // nav.style.height = "60px";
+  }
+  if (y < 200) {
+    nav.style.backgroundColor = "transparent";
+  }
+});

@@ -1,10 +1,29 @@
 //_authorization взяты чтили окна и фона
-
+.left-position {
+  position: fixed;
+  transform: $center;
+  left: 50%;
+  top: 10vh;
+}
+.color {
+  @include screen(tablet) {
+    position: fixed;
+    left: 50;
+    top: 50;
+    border-radius: 0px;
+  }
+}
 .half-window {
+  @include screen(tablet) {
+    width: 100%;
+  }
   img {
     width: 100%;
     height: auto;
     margin-left: 20%;
+    @include screen(tablet) {
+      display: none;
+    }
   }
   h6 {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -26,7 +45,7 @@
     height: 50px;
     width: 100%;
     font-size: 15px;
-    background-color: $green;
+    background-color: $gray;
     border-radius: 25px;
     padding: 10px;
     margin-top: auto;
