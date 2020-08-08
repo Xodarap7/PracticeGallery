@@ -1,19 +1,35 @@
-// @keyframes login {
-//   50% {
-//     transform: translate(10%, 0px);
-//   }
-//   100% {
-//     transform: translate(0px, 0px);
-//   }
-// }
-// @keyframes reg {
-//   50% {
-//     transform: translate(-10%, 0px);
-//   }
-//   100% {
-//     transform: translate(0px, 0px);
-//   }
-// }
+@keyframes login {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(100%, 0px);
+  }
+}
+@keyframes reg {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(-100%, 0px);
+  }
+}
+@keyframes login-mobile {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(0px, 100%);
+  }
+}
+@keyframes reg-mobile {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(0px, -100%);
+  }
+}
 .black-container {
   background-color: $black;
   width: 100%;
@@ -47,7 +63,7 @@
       background-color: $red;
       &:hover {
         background-color: rgb(230, 112, 112);
-        width: 105%;
+        width: 85%;
       }
     }
     #user-name {
@@ -63,7 +79,7 @@
       background-color: $green;
       &:hover {
         background-color: rgb(136, 241, 206);
-        width: 105%;
+        width: 85%;
       }
     }
     .button {
@@ -159,7 +175,22 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       color: white;
     }
-
+    .red-animation {
+      animation-name: reg;
+      animation-duration: 0.7s;
+      animation-fill-mode: forwards;
+      @media screen and (max-width: 690px) {
+        animation-name: reg-mobile;
+      }
+    }
+    .green-animation {
+      animation-name: login;
+      animation-duration: 0.7s;
+      animation-fill-mode: forwards;
+      @media screen and (max-width: 690px) {
+        animation-name: login-mobile;
+      }
+    }
     .red {
       display: flex;
       position: absolute;
