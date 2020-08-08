@@ -1,16 +1,16 @@
-const red = document.querySelector("#registration-red");
-const green = document.querySelector("#login-green");
-const redClass = document.querySelector("#registration-red");
-const greenClass = document.querySelector("#login-green");
+// const red = document.querySelector("#registration-red");
+// const green = document.querySelector("#login-green");
+const redClass = document.querySelector(".red");
+const greenClass = document.querySelector(".green");
 
-red.addEventListener("click", () => {
-  red.classList.add("red-animation");
+redClass.addEventListener("click", () => {
+  redClass.classList.add("red-animation");
   setTimeout(registration, 600);
   setTimeout(deleteRed, 700);
 });
 
-green.addEventListener("click", () => {
-  green.classList.add("green-animation");
+greenClass.addEventListener("click", () => {
+  greenClass.classList.add("green-animation");
   setTimeout(authorization, 600);
   setTimeout(deleteGreen, 700);
 });
@@ -26,8 +26,8 @@ function authorization() {
 }
 
 function deleteRed() {
-  red.classList.remove("red-animation");
+  redClass.classList.remove("red-animation");
 }
 function deleteGreen() {
-  green.classList.remove("green-animation");
+  greenClass.classList.remove("green-animation");
 }
