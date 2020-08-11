@@ -4,6 +4,34 @@
   }
 }
 
+.log-out-button {
+  i {
+    font-size: 40px;
+    color: $red;
+    transition: ease-in 0.2s;
+  }
+  &:hover {
+    p {
+      color: $green;
+      scale: 1;
+    }
+    span {
+      color: $green;
+    }
+    i {
+      color: $green;
+    }
+  }
+}
+span {
+  color: $red;
+  font-size: 10px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 6;
+  transition: ease-in 0.2s;
+}
+
 .menu {
   position: fixed;
   width: 100%;
@@ -17,10 +45,6 @@
   }
 
   #category-menu {
-    @media screen and (max-width: 1330px) {
-      margin: 0px 10px 0px 10px;
-    }
-
     p {
       color: $white;
       font-size: 30px;
@@ -32,6 +56,9 @@
         color: $green;
         transform: scale(1.2);
       }
+    }
+    @media screen and (max-width: 1330px) {
+      margin: 0px 10px 0px 10px;
     }
   }
 }

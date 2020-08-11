@@ -8,6 +8,7 @@
 .color {
   @include screen(tablet) {
     position: fixed;
+
     left: 50;
     top: 50;
     border-radius: 0px;
