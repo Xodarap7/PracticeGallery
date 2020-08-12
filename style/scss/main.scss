@@ -1,4 +1,7 @@
 @import "helpers/_color_and_font";
+
+@import "helpers/_global";
+
 @import "helpers/_mixins";
 
 @import "pages/_gallery";
@@ -10,15 +13,3 @@
 @import "pages/_add-image";
 
 @import "pages/_remove-image";
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  color: $black;
-  font-size: 10px;
-  font-family: "Red Rose", cursive;
-  a {
-    text-decoration: none;
-  }
-}

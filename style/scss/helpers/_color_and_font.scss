@@ -31,11 +31,3 @@ h6 {
 .text-center {
   text-align: center;
 }
-
-$center: translateX(-50%) translateY(-50%);
-#rotate180 {
-  transform: rotate(180deg);
-}
-.none {
-  opacity: 0;
-}

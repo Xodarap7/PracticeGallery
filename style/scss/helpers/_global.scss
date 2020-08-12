@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: $black;
+  font-size: 10px;
+  font-family: "Red Rose", cursive;
+  a {
+    text-decoration: none;
+  }
+}
+
+$center: translateX(-50%) translateY(-50%);
+#rotate180 {
+  transform: rotate(180deg);
+}
+.none {
+  opacity: 0;
+}
