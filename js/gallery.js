@@ -1,12 +1,9 @@
-// Фильтр картинок
-
+// IMAGE FILTER
 const categoriesMenu = document.querySelectorAll("#category-menu");
 let images = document.querySelectorAll("#photo");
 const imagesArray = Array.from(images);
 const galeryContainer = document.querySelector(".galery-container");
 let filteredImages;
-
-document.addEventListener("load", () => {});
 
 categoriesMenu.forEach((categoryMenu) => {
   categoryMenu.addEventListener("click", () => {
@@ -39,8 +36,7 @@ function deleteAll() {
   });
 }
 
-// модальное окно
-
+// MODAL
 const modal = document.querySelector(".modal");
 const modalImg = document.querySelector(".modal img");
 const overlay = document.querySelector(".overlay");
@@ -52,21 +48,16 @@ const next = document.querySelector(".next");
 function closePhoto() {
   modal.style.display = "none";
   overlay.style.display = "none";
-
-  closeBtn.style.display = "none";
-  nextPrevious.style.display = "none";
 }
 
 function openPhoto() {
   modal.style.display = "block";
-  closeBtn.style.display = "block";
   overlay.style.display = "block";
-  nextPrevious.style.display = "block";
 }
 
 let route;
 images.forEach((photo) => {
-  if (window.innerWidth < 1330) {
+  if (window.innerWidth < 500) {
     return;
   } else {
     photo.addEventListener("click", () => {
@@ -114,18 +105,16 @@ function nextImage() {
   }
 }
 
-//bg color menu
+// MENU SCROLL (CHANGE BG COLOR)
 const nav = document.querySelector(".menu");
-let y;
+let offsetTop;
 
 window.addEventListener("scroll", () => {
-  y = window.scrollY;
-
-  if (y > 200) {
+  offsetTop = window.scrollY;
+  if (offsetTop > 200) {
     nav.style.backgroundColor = "#000";
-    // nav.style.height = "60px";
   }
-  if (y < 200) {
+  if (offsetTop < 200) {
     nav.style.backgroundColor = "transparent";
   }
 });

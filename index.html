@@ -22,40 +22,38 @@
     <title>Document</title>
   </head>
   <body>
-    <nav>
-      <div class="menu">
-        <div class="log-out-button">
-          <a href=""
-            ><i class="material-icons">logout</i>
-            <p><span>Log-out</span></p></a
-          >
-        </div>
-        <div id="category-menu" class="c-all"><p>All</p></div>
-        <div id="category-menu" class="c-space"><p>Space</p></div>
-        <div id="category-menu" class="c-nature"><p>Nature</p></div>
-        <div id="category-menu" class="c-cars"><p>Cars</p></div>
-        <div id="category-menu" class="c-food"><p>Food</p></div>
-      </div>
-    </nav>
+    <!-- OVERLAY -->
     <div class="overlay"></div>
-    <div class="close-window">
-      <i class="material-icons">clear</i>
-    </div>
-    <div class="next-previous">
-      <div class="previous"><i class="material-icons">chevron_left</i></div>
-      <div class="next">
+    <!-- MODAL -->
+    <div class="modal">
+      <div class="close-window">
+        <i class="material-icons">clear</i>
+      </div>
+      <div class="modal-slide-btn previous">
+        <i class="material-icons">chevron_left</i>
+      </div>
+      <div class="modal-slide-btn next">
         <i class="material-icons">chevron_right</i>
       </div>
+      <img src="#" alt="Modal Image" />
     </div>
-    <div class="modal">
-      <img src="" alt="" />
-    </div>
-    <header>
-      <div class="header">
-        <img class="header-img" src="img/header.jpg" alt="" />
+    <!-- MENU -->
+    <nav class="menu">
+      <div class="log-out-button">
+        <a href=""
+          ><i class="material-icons">logout</i>
+          <p><span>Log-out</span></p></a
+        >
       </div>
-    </header>
-
+      <div id="category-menu" class="c-all"><h3>All</h3></div>
+      <div id="category-menu" class="c-space"><h3>Space</h3></div>
+      <div id="category-menu" class="c-nature"><h3>Nature</h3></div>
+      <div id="category-menu" class="c-cars"><h3>Cars</h3></div>
+      <div id="category-menu" class="c-food"><h3>Food</h3></div>
+    </nav>
+    <!-- HEADER IMAGE -->
+    <div class="header"></div>
+    <!-- GALLERY -->
     <div class="galery-container">
       <img class="c-space c-all" id="photo" src="img/space-1.jpg" alt="" />
       <img class="c-space c-all" id="photo" src="img/space-2.jpg" alt="" />
