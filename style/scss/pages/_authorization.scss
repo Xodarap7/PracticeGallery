@@ -3,7 +3,8 @@
   width: 100%;
   height: 100vh;
 }
-.container-auth {
+.container-auth,
+.container-add-image {
   width: 900px;
   height: 60vh;
   background-color: $white;
@@ -20,32 +21,6 @@
     flex-direction: column;
     height: 90%;
   }
-  .btn {
-    padding: 10px 60px;
-    border-radius: 25px;
-    font-size: 18px;
-    cursor: pointer;
-    color: $white;
-    transition: 0.2s ease-in;
-  }
-  .btn-green {
-    border: 2px solid $green;
-    background-color: $white;
-    color: $green;
-    &:hover {
-      background-color: $green;
-      color: $white;
-    }
-  }
-  .btn-red {
-    border: 2px solid $red;
-    background-color: $white;
-    color: $red;
-    &:hover {
-      background-color: $red;
-      color: $white;
-    }
-  }
   .half-window {
     width: 50%;
     height: 100%;
@@ -54,38 +29,6 @@
     @media screen and (max-width: 700px) {
       width: 100%;
       padding-top: 20px;
-    }
-    .form-auth {
-      width: 70%;
-      height: auto;
-      display: flex;
-      margin: auto;
-      position: relative;
-      flex-direction: column;
-      text-align: center;
-      .input-form-auth {
-        height: 50px;
-        width: 100%;
-        border-radius: 25px;
-        border: solid 2px $gray;
-        padding-left: 10px;
-        margin-top: 15px;
-        font-size: 18px;
-        outline: none;
-        &:focus {
-          background-color: rgb(230, 247, 255);
-          border-color: $green;
-        }
-        &:first-child {
-          margin-top: 0;
-        }
-      }
-      small {
-        margin: 7.5px 0px 7.5px 0px;
-        a {
-          font-size: 13px;
-        }
-      }
     }
     .btn-green {
       margin-top: 7.5px;
@@ -115,6 +58,10 @@
         border: 1px solid $white;
       }
     }
+    @media screen and (max-width: 700px) {
+      width: 100%;
+      height: 50%;
+    }
   }
   .red-side-container {
     z-index: 2;
@@ -129,10 +76,7 @@
       }
     }
     @media screen and (max-width: 700px) {
-      border-radius: 20px;
-      width: 100%;
-      height: 50%;
-      left: 0%;
+      left: 0;
       top: 50%;
     }
   }
@@ -146,11 +90,6 @@
           color: $green;
         }
       }
-    }
-    @media screen and (max-width: 700px) {
-      border-radius: 20px;
-      width: 100%;
-      height: 50%;
     }
   }
 }

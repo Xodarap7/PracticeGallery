@@ -1,72 +1,46 @@
-//_authorization взяты чтили окна и фона
+// .container-add-image -  _authorization.scss
 .left-position {
   position: fixed;
   transform: $center;
   left: 50%;
   top: 10vh;
-}
-.color {
-  @include screen(tablet) {
-    position: fixed;
-
-    left: 50;
-    top: 50;
-    border-radius: 0px;
-  }
+  color: $white;
 }
 .half-window {
-  @include screen(tablet) {
-    width: 100%;
-  }
-  img {
-    width: 100%;
-    height: auto;
-    margin-left: 20%;
+  flex-direction: column;
+  &:nth-child(1) {
     @include screen(tablet) {
       display: none;
     }
   }
+  &:nth-child(2) {
+    background-color: $red;
+    @include screen(tablet) {
+      width: 100%;
+    }
+  }
+  img {
+    width: 100%;
+  }
   h6 {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
-    margin-top: 20%;
   }
   .categories {
     width: 100%;
     height: 50px;
     border: solid 1px;
     font-size: 20px;
+    margin-top: 15px;
     option {
       height: 30px;
       font-size: 15px;
     }
   }
-
-  #new-image {
-    height: 50px;
-    width: 100%;
-    font-size: 15px;
-    background-color: $gray;
-    border-radius: 25px;
-    padding: 10px;
-    margin-top: auto;
-    &:focus {
-      background-color: inherit;
-    }
+  .input-upload {
+    margin-top: 15px;
   }
-
   .button-load {
-    width: 100%;
-    height: 50px;
-    font-size: 20px;
-    border-radius: 20px;
-    border: solid 1px;
-    margin-top: 5px;
-    background-color: $green;
-    // opacity: 0;
     display: none;
-    &:focus {
-      border-radius: initial;
-    }
+    margin-top: 15px !important;
   }
 }

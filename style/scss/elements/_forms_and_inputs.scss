@@ -1,0 +1,48 @@
+// FORM AUTH & FORM CRUD
+.form-auth,
+.form-crud {
+  width: 70%;
+  height: auto;
+  display: flex;
+  margin: auto;
+  position: relative;
+  flex-direction: column;
+  text-align: center;
+  .input-form-auth {
+    height: 50px;
+    width: 100%;
+    border-radius: 25px;
+    border: solid 2px $gray;
+    padding-left: 10px;
+    margin-top: 15px;
+    font-size: 18px;
+    outline: none;
+    &:focus {
+      background-color: rgb(230, 247, 255);
+      border-color: $green;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  small {
+    margin: 7.5px 0px 7.5px 0px;
+    a {
+      font-size: 13px;
+    }
+  }
+}
+
+.form-crud {
+  .input-upload {
+    height: 50px;
+    width: 100%;
+    font-size: 15px;
+    background-color: $gray;
+    border-radius: 25px;
+    padding: 10px;
+    &:focus {
+      background-color: inherit;
+    }
+  }
+}

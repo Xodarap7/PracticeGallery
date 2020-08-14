@@ -14,31 +14,31 @@
   </head>
   <body>
     <div class="black-container">
-      <div class="left-position">
-        <a href=""
-          ><div class="nav-buttons none">
-            <i class="material-icons">undo</i>
-            <h3 class="text-center">Back to menu</h3>
-          </div></a
-        >
-      </div>
-      <div class="window">
+      <div class="container-add-image">
         <div class="half-window">
           <img src="../img/new_image.svg" alt="" />
         </div>
-        <div class="half-window color">
-          <h3>Add new image</h3>
-
-          <h6>Select a category</h6>
-          <select class="categories">
-            <option value="c-all"></option>
-            <option value="c-space c-all">Space</option>
-            <option value="c-nature c-all">Nature</option>
-            <option value="c-car c-all">Cars</option>
-            <option value="c-food c-all">Food</option>
-          </select>
-          <input type="file" name="" id="new-image" />
-          <input type="button" value="Upload" class="button-load" />
+        <div class="half-window">
+          <form action="#" class="form-crud">
+            <h3>Add new image</h3>
+            <h6>Select a category</h6>
+            <select class="categories">
+              <option value="c-all"></option>
+              <option value="c-space c-all">Space</option>
+              <option value="c-nature c-all">Nature</option>
+              <option value="c-car c-all">Cars</option>
+              <option value="c-food c-all">Food</option>
+            </select>
+            <input
+              type="file"
+              name="images"
+              class="input-upload"
+              id="add-image"
+            />
+            <button class="btn btn-green button-load" type="submit">
+              Upload
+            </button>
+          </form>
         </div>
       </div>
     </div>
