@@ -1,15 +1,17 @@
-// const red = document.querySelector("#registration-red");
-// const green = document.querySelector("#login-green");
-const redClass = document.querySelector(".red");
-const greenClass = document.querySelector(".green");
+const btnOpenRegister = document.querySelector("#open-register");
+const btnOpenLogin = document.querySelector("#open-login");
+const redClass = document.querySelector(".red-side-container");
+const greenClass = document.querySelector(".green-side-container");
 
-redClass.addEventListener("click", () => {
+btnOpenRegister.addEventListener("click", (e) => {
+  e.preventDefault();
   redClass.classList.add("red-animation");
   setTimeout(registration, 600);
   setTimeout(deleteRed, 700);
 });
 
-greenClass.addEventListener("click", () => {
+btnOpenLogin.addEventListener("click", (e) => {
+  e.preventDefault();
   greenClass.classList.add("green-animation");
   setTimeout(authorization, 600);
   setTimeout(deleteGreen, 700);

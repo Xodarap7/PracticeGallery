@@ -7,9 +7,7 @@ let filteredImages;
 
 categoriesMenu.forEach((categoryMenu) => {
   categoryMenu.addEventListener("click", () => {
-    addAll();
     const filter = categoryMenu.getAttribute("class");
-    deleteAll();
     filterImages(filter);
   });
 });
@@ -18,16 +16,15 @@ function filterImages(filter) {
   filteredImages = imagesArray.filter((image) =>
     image.classList.contains(filter)
   );
-  filteredImages.forEach((filteredImage) => {
-    galeryContainer.appendChild(filteredImage);
+  if (filteredImages.length === 0) {
+    return;
+  } else {
+    deleteAll();
+    filteredImages.forEach((filteredImage) => {
+      galeryContainer.appendChild(filteredImage);
+    });
     images = filteredImages;
-  });
-}
-
-function addAll() {
-  images.forEach((image) => {
-    galeryContainer.appendChild(image);
-  });
+  }
 }
 
 function deleteAll() {
@@ -41,7 +38,6 @@ const modal = document.querySelector(".modal");
 const modalImg = document.querySelector(".modal img");
 const overlay = document.querySelector(".overlay");
 const closeBtn = document.querySelector(".close-window");
-const nextPrevious = document.querySelector(".next-previous");
 const previous = document.querySelector(".previous");
 const next = document.querySelector(".next");
 

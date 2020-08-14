@@ -1,3 +1,110 @@
+.black-container {
+  background-color: $black;
+  width: 100%;
+  height: 100vh;
+}
+.container-auth,
+.container-add-image {
+  width: 900px;
+  height: 60vh;
+  background-color: $white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: $center;
+  border-radius: 20px;
+  display: flex;
+  @include screen(tablet-wide) {
+    width: 90%;
+  }
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    height: 90%;
+  }
+  .half-window {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 700px) {
+      width: 100%;
+      padding-top: 20px;
+    }
+    .btn-green {
+      margin-top: 7.5px;
+    }
+    .btn-red {
+      margin-top: 15px;
+    }
+  }
+  .side-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    .content-wrapper {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      text-align: center;
+      .btn {
+        margin-top: 10px;
+        border: 1px solid $white;
+      }
+    }
+    @media screen and (max-width: 700px) {
+      width: 100%;
+      height: 50%;
+    }
+  }
+  .red-side-container {
+    z-index: 2;
+    background-color: $red;
+    right: 0;
+    .content-wrapper {
+      .btn {
+        &:hover {
+          background-color: $white;
+          color: $red;
+        }
+      }
+    }
+    @media screen and (max-width: 700px) {
+      left: 0;
+      top: 50%;
+    }
+  }
+  .green-side-container {
+    background-color: $green;
+    display: none;
+    .content-wrapper {
+      .btn {
+        &:hover {
+          background-color: $white;
+          color: $green;
+        }
+      }
+    }
+  }
+}
+// ANIMATIONS
+.red-animation {
+  animation-name: reg;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+.green-animation {
+  animation-name: login;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+
 @keyframes login {
   0% {
     transform: translate(0px, 0px);
@@ -14,213 +121,16 @@
     transform: translate(-100%, 0px);
   }
 }
-@keyframes login-mobile {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  100% {
-    transform: translate(0px, 100%);
-  }
-}
-@keyframes reg-mobile {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  100% {
-    transform: translate(0px, -100%);
-  }
-}
-.black-container {
-  background-color: $black;
-  width: 100%;
-  height: 100vh;
 
-  .window {
-    width: 50%;
-    height: 60vh;
-    background-color: $white;
-    border: solid 1px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: $center;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: row;
-    @include screen(desktop) {
-      width: 70%;
+@media screen and (max-width: 700px) {
+  @keyframes reg {
+    100% {
+      transform: translate(0px, -100%);
     }
-    @include screen(tablet) {
-      width: 90%;
-    }
-    @media screen and (max-width: 700px) {
-      flex-direction: column;
-      width: 90%;
-      height: 90%;
-      border-radius: 20px;
-    }
-    #reg-button {
-      background-color: $red;
-      &:hover {
-        background-color: rgb(230, 112, 112);
-        width: 85%;
-      }
-    }
-    #user-name {
-      background-color: rgb(230, 247, 255);
-    }
-    #email {
-      background-color: rgb(230, 247, 255);
-    }
-    #password {
-      background-color: rgb(230, 247, 255);
-    }
-    #login-button {
-      background-color: $green;
-      &:hover {
-        background-color: rgb(136, 241, 206);
-        width: 85%;
-      }
-    }
-    .button {
-      height: 6vh;
-      width: 80%;
-      border-radius: 25px;
-      border: solid 1px;
-      padding: 10px;
-      margin-top: 10px;
-      font-size: 18px;
-      margin-top: auto;
-      align-items: bottom;
-      cursor: pointer;
-      @media screen and (max-width: 700px) {
-        margin-top: 10px;
-      }
-      &:focus {
-        border-radius: inherit;
-        border: 2px;
-      }
-    }
-    .green {
-      display: none;
-      position: absolute;
-      width: 50%;
-      background-color: $green;
-      height: 100%;
-      cursor: pointer;
-      user-select: none;
-      border-radius: 20px;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      @media screen and (max-width: 700px) {
-        border-radius: 20px;
-        width: 100%;
-        height: 50%;
-      }
-      // &:hover {
-      //   animation-name: login;
-      //   animation-duration: 0.7s;
-      // }
-      h3 {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: $center;
-      }
-    }
-    .color {
-      background-color: $red;
-      border-radius: 20px;
-    }
-    .half-window {
-      width: 50%;
-      height: 100%;
-      padding: 5%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      @media screen and (max-width: 700px) {
-        width: 100%;
-        padding-top: 20px;
-      }
-
-      h3 {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
-      .enter-block {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 10vh;
-        @media screen and (max-width: 700px) {
-          margin-top: 2vh;
-        }
-        input {
-          height: 6vh;
-          width: 80%;
-          border-radius: 25px;
-          border: solid 1px;
-          padding: 10px;
-          margin-top: 10px;
-          font-size: 18px;
-          &:focus {
-            border-radius: inherit;
-            border: 2px;
-          }
-        }
-      }
-    }
-    .text {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      color: white;
-    }
-    .red-animation {
-      animation-name: reg;
-      animation-duration: 0.7s;
-      animation-fill-mode: forwards;
-      @media screen and (max-width: 690px) {
-        animation-name: reg-mobile;
-      }
-    }
-    .green-animation {
-      animation-name: login;
-      animation-duration: 0.7s;
-      animation-fill-mode: forwards;
-      @media screen and (max-width: 690px) {
-        animation-name: login-mobile;
-      }
-    }
-    .red {
-      display: flex;
-      position: absolute;
-      left: 50%;
-      width: 50%;
-      background-color: $red;
-      height: 100%;
-      flex-direction: column;
-      align-items: center;
-      border-radius: 20px;
-      padding: 20px;
-      cursor: pointer;
-      user-select: none;
-      @media screen and (max-width: 700px) {
-        border-radius: 20px;
-        width: 100%;
-        height: 50%;
-        left: 0%;
-        top: 50%;
-      }
-      // &:hover {
-      //   animation-name: reg;
-      //   animation-duration: 1s;
-      // }
-      h3 {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: $center;
-      }
+  }
+  @keyframes login {
+    100% {
+      transform: translate(0px, 100%);
     }
   }
 }
