@@ -1,31 +1,25 @@
-@keyframes rotation {
-  to {
-    transform: rotate(90deg);
-  }
-}
-
 .log-out-button {
   i {
     font-size: 40px;
-    color: $red;
+    color: $white;
     transition: ease-in 0.2s;
   }
   &:hover {
     p {
-      color: $green;
+      color: $red;
       scale: 1;
     }
     span {
-      color: $green;
+      color: $red;
     }
     i {
-      color: $green;
+      color: $red;
     }
   }
 }
 span {
-  color: $red;
-  font-size: 10px;
+  color: $white;
+  font-size: 15px;
   cursor: pointer;
   user-select: none;
   z-index: 6;
@@ -148,8 +142,29 @@ span {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  position: relative;
+
   @include screen(tablet) {
     height: 450px;
+  }
+  .header-text {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    border: $white 2px solid;
+    transform: translateX(-50%);
+    background-color: black;
+    border-radius: 20px;
+    padding: 30px;
+    h1 {
+      color: $white;
+      font-style: italic;
+      span {
+        color: $green;
+        font-size: 80px;
+        font-style: italic;
+      }
+    }
   }
 }
 
@@ -180,5 +195,11 @@ span {
     @include screen(phone) {
       width: 100%;
     }
+  }
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(90deg);
   }
 }
