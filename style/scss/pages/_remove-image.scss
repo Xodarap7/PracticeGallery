@@ -1,8 +1,35 @@
-.left-pos {
-  .nav-buttons {
-    justify-content: flex-start;
-    margin-bottom: 20px;
-    padding: 10px;
+// .left-pos {
+//   .nav-buttons {
+//     display: flex;
+//     justify-content: flex-start;
+//     justify-items: start;
+//     margin-bottom: 20px;
+//     padding: 10px;
+//   }
+// }
+.left-positi {
+  height: auto;
+  padding: 5px 20px;
+  width: 100%;
+  background-color: black;
+  a {
+    display: flex;
+    flex-direction: row;
+    &:hover {
+      i {
+        color: $red;
+      }
+      h3 {
+        color: $red;
+      }
+    }
+    i {
+      color: white;
+      font-size: 40px;
+    }
+    h3 {
+      color: white;
+    }
   }
 }
 

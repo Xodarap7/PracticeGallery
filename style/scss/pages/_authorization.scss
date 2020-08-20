@@ -14,6 +14,9 @@
   transform: $center;
   border-radius: 20px;
   display: flex;
+  img {
+    height: 100%;
+  }
   @include screen(tablet-wide) {
     width: 90%;
   }
@@ -21,11 +24,22 @@
     flex-direction: column;
     height: 90%;
   }
+  h4 {
+    background-color: $white;
+    border-radius: 20px;
+    padding: 5px 20px;
+    margin-top: 10px;
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
   .half-window {
     width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
+
     @media screen and (max-width: 700px) {
       width: 100%;
       padding-top: 20px;
